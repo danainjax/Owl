@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Xponent is my Flatiron Mod 3 Ruby on Rails Project.
 
-Things you may want to cover:
+It is a team application with the simple goal of being able to do more - together. (Xponent- to the nth power)
 
-* Ruby version
+- Assign tasks to team members, or work a task
+- Stay connected with an asynchronous message board function
+- See who's working, and what they are working on
+- Who needs help, how to add the power of Xponent to exceed customer Xpectations!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Created by: Dana Pughakoff
+Ponte Vedra, Florida, USA
