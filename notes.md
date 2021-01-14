@@ -1,5 +1,7 @@
 -- Project planning resource --
+
 Requirements:
+
 [X]   1. Use the Ruby on Rails framework.
 
 [ ]   2. Your models must:
