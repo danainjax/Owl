@@ -1,0 +1,8 @@
+<% User.all.each do |user| %>
+<div>
+    <ul>
+        <li><h2><%= user.username %></h2></li>
+        <%= user.email %><br>
+    </ul>
+</div>
+<% end %>
