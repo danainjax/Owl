@@ -4,47 +4,62 @@ Xponent App
 
 Models:
 
-User
-    has_many jobs
-    has_one status
-    has_many comments
-    has_many supports through comments
+*User
+    has_many: assignments
+    has_many :jobs
+    has_many jobs, through :assignments
+    has_many :comments
+    has_many comments, through :jobs
 
-    name
-    user id
+    <!-- has_many comments, through :jobs
+    has_many :supports, through :comments -->
+
+    username
     email
-    team
-    lead
-    schedule
-    status
+    password_digest
+    
 
     (Want to be able to work on a job/task, update a job/task, comment on a job/task, close a job/task, request support, accept support, provide support)
 
-Job
+*Job
     belongs_to user
+    belongs_to :assignment
+    has_many :comments, through :users
+    has_one :assignment, through:users
 
+    title
     description
-    status (open, closed, in progress)
+    priority
+    <!-- assignment (open, closed, in progress) -->
 
     (can be assigned to a user, can be accepted by, updated by, commented on, and closed by a user)
 
-Status
-    belongs_to user
-    belongs_to job
-
+*Assignment
+    belongs_to :job
+    belongs_to :user
+    
+ -status
         select from a check box  or drop down
 
-    (a user can have a status - working, off, what they are working on, AND a job can have a status - open, pending, in progress, closed)
+    (a job can be assigned - open, pending, in progress, closed)
 
-Comment
-    belongs_to user
-    
+<!-- Status
+    belongs_to :user -->
+    <!-- Stretch feature: (a user can have a status - working, off, what they are working on) -->
 
-    (a user can comment on a job and a user can comment in the support area)
+*Comment
+    belongs_to :jobs, through :users
+    belongs_to :job
+    (a user can comment on a job
+    -content
+    <!-- belongs_to :support     -->
+    <!-- belongs_to :user, through :supports -->
+<!-- and a user can comment in the support area) -->
 
+<!-- Stretch feature 
 Support
+    belongs_to :user
+    has_many :comments, through users
 
-    has_many comments through users
-
-    (model that is a chat for questions and answers, sharing information and providing team spirit)
+    (model that is a chat for questions and answers, sharing information and providing team spirit) -->
 
