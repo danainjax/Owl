@@ -5,11 +5,11 @@ Xponent App
 Models:
 
 *User
-    has_many: assignments
+    has_many :assignments
     has_many :jobs
-    has_many jobs, through :assignments
+    has_many :jobs, :through => :assignments
     has_many :comments
-    has_many comments, through :jobs
+    has_many :comments, :through => :jobs  
 
     <!-- has_many comments, through :jobs
     has_many :supports, through :comments -->
@@ -22,10 +22,10 @@ Models:
     (Want to be able to work on a job/task, update a job/task, comment on a job/task, close a job/task, request support, accept support, provide support)
 
 *Job
-    belongs_to user
+    belongs_to :user
     belongs_to :assignment
-    has_many :comments, through :users
-    has_one :assignment, through:users
+    has_many :assignments, :through => :users
+    has_many :comments, :through => :users
 
     title
     description
@@ -37,6 +37,7 @@ Models:
 *Assignment
     belongs_to :job
     belongs_to :user
+    
     
  -status
         select from a check box  or drop down

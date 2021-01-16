@@ -2,7 +2,8 @@ class CreateAssignments < ActiveRecord::Migration[5.2]
   def change
     create_table :assignments do |t|
       t.string :status
-
+      t.belongs_to :user
+      t.belongs_to :job
       t.timestamps
     end
   end
