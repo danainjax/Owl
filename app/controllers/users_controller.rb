@@ -8,6 +8,10 @@ class UsersController < ApplicationController
         @user = User.new
         @user.save
     end
+
+    def show
+    end
+    
     
 
 end

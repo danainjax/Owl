@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  get '/signup' => 'users#new'
+  get '/login' => 'users#login'
+    
   resources :statuses
   resources :supports
   resources :comments
