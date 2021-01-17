@@ -5,7 +5,7 @@ class AssignmentsController < ApplicationController
     end
 
     def create
-        @assignment = current_user.assignment.build(assignment_params)
+        @assignment = current_user.assignments.build(assignment_params)
         if @assignment.save
             redirect_to @assignment
         else

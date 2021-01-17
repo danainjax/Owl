@@ -20,10 +20,10 @@
     <% if !logged_in? %>
       <%= link_to "Sign Up", signup_path %> | <%= link_to "Log In", login_path %> |
     <% else %>
-      <%= link_to "Add a Job", new_job_path %> |
-      <%= link_to "All Jobs", jobs_path %> | 
-      <%= link_to "Assign a Job", new_assignment_path %> |
-      <%= link_to "All Assignments", assignments_path %> |
+      <%= link_to "Add a Task", new_task_path %> |
+      <%= link_to "To Do", tasks_path %> | 
+      <%= link_to "Assign a Task", new_assignment_path %> |
+      <%= link_to "Current Assignments Board", assignments_path %> |
       <%= link_to "Logout", logout_path, method: "delete" %>
     <% end %>
 

@@ -1,10 +1,10 @@
-class CreateJobs < ActiveRecord::Migration[5.2]
+class CreateTasks < ActiveRecord::Migration[5.2]
   def change
-    create_table :jobs do |t|
+    create_table :tasks do |t|
       t.string :title
       t.string :description 
       t.string :priority
-      t.integer :user_id
+
       t.timestamps
     end
   end
