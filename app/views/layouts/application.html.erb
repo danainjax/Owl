@@ -17,8 +17,13 @@
 <img src="/images/Xponent_logo.png" style="width:350px;height:350px;">
   <body>
     <div>
-    <%= link_to "Sign Up", signup_path %> | <%= link_to "Log In", login_path %> |
-    <%= link_to "Logout", logout_path, method: "delete" %>
+    <% if !logged_in? %>
+      <%= link_to "Sign Up", signup_path %> | <%= link_to "Log In", login_path %> |
+    <% else %>
+      <%= link_to "Add a Job", new_job_path %> |
+      <%= link_to "All Jobs", jobs_path %> | 
+      <%= link_to "Logout", logout_path, method: "delete" %>
+    <% end %>
 
     </div>
     <%= yield %>

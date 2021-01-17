@@ -1,5 +1,7 @@
 class JobsController < ApplicationController
 
+before_action :redirect_if_not_logged_in
+
     def new
         @job = Job.new
     end
@@ -8,5 +10,5 @@ class JobsController < ApplicationController
         @job = Job.new
         @job.save
     end
-    
+
 end
