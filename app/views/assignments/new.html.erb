@@ -1,0 +1,11 @@
+<h1> Assign a Job </h1>
+
+<%= form_for (@assignment) do |f| %>
+
+<%= f.label :job %>
+<%= f.collection_select :job, Job.all, :title, :title %>
+    
+
+<%= f.submit %>
+
+<% end %>
