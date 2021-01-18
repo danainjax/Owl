@@ -2,11 +2,20 @@
 
 <!-- this is a form to assign a task to a user and assign a status: open, closed, working, follow_up -->
 
+
+<!-- form tag for assignment
+
+Drop down > label task_id show @task.title 
+Drop down > label user_id show @user.username 
+Check box > label status show :status (make selections from 4 options: open, closed, working, and follow-up ) -->
+
+
+
 <%= form_for (@assignment) do |f| %>
 
 <%= f.label :status %>
 
-<%= f.collection_select :status, Task.all, :user_ids, :status %>
+<%= f.text_area  :status %>
 
 
 

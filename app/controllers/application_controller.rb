@@ -11,6 +11,10 @@ private
         @current_task ||= Task.find_by_id(session[:task_id]) if session[:task_id]
     end
 
+    def current_assignment 
+        @current_assignment ||= Assignment.find_by_id(session[:assignment_id]) if session[:assignment_id]
+    end
+
     def logged_in?
         !!session[:user_id]
     end
