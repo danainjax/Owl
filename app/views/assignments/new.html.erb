@@ -1,12 +1,15 @@
 <h1> Assign a Task </h1>
 
+<!-- this is a form to assign a task to a user and assign a status: open, closed, working, follow_up -->
+
 <%= form_for (@assignment) do |f| %>
 
 <%= f.label :status %>
 
+<%= f.collection_select :status, Task.all, :user_ids, :status %>
 
-<f.label :task>
-<%= f.collection_select :task, Task.all, :title, :title %>
+
+
 
 
 <%= f.submit %>
