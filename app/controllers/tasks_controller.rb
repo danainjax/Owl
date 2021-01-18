@@ -29,8 +29,8 @@ class TasksController < ApplicationController
 
     def update
         @task = Task.find_by(id:params[:id])
-        @task.update
-
+        @task.update(task_params)
+            redirect_to @task
     end
 
     private
