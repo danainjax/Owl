@@ -7,6 +7,10 @@ private
         @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]
     end
 
+    def current_task
+        @current_task ||= Task.find_by_id(session[:task_id]) if session[:task_id]
+    end
+
     def logged_in?
         !!session[:user_id]
     end
