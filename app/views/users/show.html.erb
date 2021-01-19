@@ -1,6 +1,12 @@
 
 <h1>Welcome, <%= @user.username %></h1>
 
+<h2> My Assigned Tasks: </h2>
+
+<ol>
+    Add User's Assigned tasks here 
+
+</ol>
 
 <%=  form_tag( '/logout', method:'delete') do %>
     <%= submit_tag "Logout" %>

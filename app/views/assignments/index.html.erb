@@ -1,5 +1,7 @@
 <h1> Assignments </h1>
 <% @assignments.each do |a| %>
-    <%= a.task.title %> / <%= a.task.description %>
-     / Assigned to: <%= Assignment.last.user.username %>
+<ul>
+        <li><%= a.task.title %> / <%= a.task.description %>
+        / Assigned to: <%= a.user.username %></li>
+     </ul>
 <% end %>
