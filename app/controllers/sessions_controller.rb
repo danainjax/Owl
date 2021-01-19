@@ -18,23 +18,22 @@ class SessionsController < ApplicationController
 
     def facebook
         # binding.pry
-        @user = User.find_or_create_by(email: auth['email']) do |u|
-          
-          u.username = auth['info']['name']
-          u.email = auth['info']['email']
-          u.image = auth['info']['image']
-          u.password = SecureRandom.hex(10)
+        @user = User.find_or_create_by(email: auth['info']['email']) do |user|
+          user.username = auth['info']['name']
+          user.email = auth['info']['email']
+          user.password = SecureRandom.hex(10)
         end
         if @user.save
-        session[:user_id] = @user.id
+            session[:user_id] = @user.id
             redirect_to user_path(@user)
         else 
             redirect_to '/'
         end
-      end
+    end
 
     def destroy
-        session.clear
+        # session.clear
+        session[:user_id] = nil
         redirect_to root_path
     end
 

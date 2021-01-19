@@ -1,6 +1,6 @@
 
 <h1>Welcome, <%= @user.username %></h1>
-<img src="<%= @user.image %>">
+
 
 <%=  form_tag( '/logout', method:'delete') do %>
     <%= submit_tag "Logout" %>
