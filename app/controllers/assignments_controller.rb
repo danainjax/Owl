@@ -6,10 +6,10 @@ class AssignmentsController < ApplicationController
     end
 
     def create
-        # binding.pry
-        #need to modify the code to save the assignment of a task to a user 
-        @assignment = current_user.assignments.build(assignment_params)
         
+        #need to modify the code to save the assignment of a task to a user 
+        @assignment = current_user.assignments.create(assignment_params)
+        redirect_to assignment_path(@assignment)
     end
 
     def index
