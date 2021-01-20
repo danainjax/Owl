@@ -15,7 +15,12 @@ class TasksController < ApplicationController
     end
 
     def index
+        if params[:user_id] && @user = User.find_by_id(params[:user_id])
+            @tasks = @user.tasks
+        else
+            # flash[:message] = "That task doesn't exist" if params[:]
         @tasks = Task.all 
+        end
     end
 
     def show

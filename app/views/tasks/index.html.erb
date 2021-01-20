@@ -1,7 +1,11 @@
 <h1>Tasks</h1>
 <ul>
     <% @tasks.each do |task| %>
-    <li><%= task.title %></li>
+    <li><h3><%= task.title %></h3></li>
+    <%= task.description %> / Assigned to:
+        <% task.users.each do |user| %>
+        <%= user.username %>
+        <% end %>
 
     <% end %>
 </ul>

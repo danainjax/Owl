@@ -1,19 +1,21 @@
 class AssignmentsController < ApplicationController
+    before_action :redirect_if_not_logged_in
 
     def new
-        #need to modify the code here to assign a task to a user 
         @assignment = Assignment.new
     end
 
     def create
-        
-        #need to modify the code to save the assignment of a task to a user 
-        @assignment = current_user.assignments.create(assignment_params)
+        @assignment = Assignment.create(assignment_params)
         redirect_to assignment_path(@assignment)
     end
 
     def index
-        @assignments = Assignment.all
+        if params[:user_id] && @user = User.find_by_id(params[:user_id])
+            @assignments = @user.assignments
+        else
+            @assignments = Assignment.all
+        end
     end
 
     def show

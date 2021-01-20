@@ -1,4 +1,8 @@
 <h1>The @ assignment <h1>
-<%= @assignment.task.title %> / <%= @assignment.task.description %> / 
-Status: <%= @assignment.status %>
+
+Title: <%= @assignment.task.title %><br>
+Description : <%= @assignment.task.description %> <br>
+Status: <%= @assignment.status %><br> 
+Assigned to: <%= @assignment.user.username%>
+
 
