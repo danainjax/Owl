@@ -4,7 +4,8 @@ class User < ApplicationRecord
     has_secure_password #authenticate, validates password
 
     has_many :comments
-    has_many :comments, :through => :tasks   
+    has_many :tasks, :through => :comments 
+     
     validates :username, presence: true, uniqueness: true #user validations
     validates :email, presence: true, uniqueness: true #user validations
 end
