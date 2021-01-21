@@ -16,17 +16,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <img src="/images/Xponent_logo.png" style="width:350px;height:350px;">
   <body>
-    <div>
-    <% if !logged_in? %>
-      <%= link_to "Sign Up", signup_path %> | <%= link_to "Log In", login_path %> | <%= link_to('Log in with Facebook!', '/auth/facebook') %>
-    <% else %>
-      <%= link_to "Add a Task", new_task_path %> |
-      <%= link_to "All Tasks", tasks_path %> | 
-      <%= link_to "Assign a Task", new_assignment_path %> |
-      <%= link_to "Current Assignments Board", assignments_path %> |
-      <%= link_to "Logout", logout_path, method: "delete" %>
-    <% end %>
-
+    
+    <div class="topnav">
+      <% if !logged_in? %>
+        <%= link_to "Sign Up", signup_path %> | <%= link_to "Log In", login_path %> | <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+      <% else %>
+        <%= link_to 'Home', root_path %>%>
+        <%= link_to "Add a Task", new_task_path %> |
+        <%= link_to "All Tasks", tasks_path %> | 
+        <%= link_to "Assign a Task", new_assignment_path %> |
+        <%= link_to "Current Assignments Board", assignments_path %> |
+        <%= link_to "Logout", logout_path, method: "delete" %>
+      <% end %>
     </div>
 
     <div>
