@@ -9,17 +9,19 @@ Drop down > label task_id show @task.title
 Drop down > label user_id show @user.username 
 Check box > label status show :status (make selections from 4 options: open, closed, working, and follow-up ) -->
 
+<div class="container">
+    <div class="row">
+        <div class="col-25">
 
+    <%= form_for (@assignment) do |f| %>
 
-<%= form_for (@assignment) do |f| %>
+    <%= f.collection_select :task_id, Task.all, :id, :title%>
 
-<%= f.collection_select :task_id, Task.all, :id, :title%>
+    <%= f.collection_select :user_id, User.all, :id, :username%>
 
-<%= f.collection_select :user_id, User.all, :id, :username%>
+    <%= f.label "Status" %>
+    <%= f.text_field :status %>
 
-<%= f.label "Status" %>
-<%= f.text_field :status %>
-
-<%= f.submit %>
+    <%= f.submit %>
 
 <% end %>

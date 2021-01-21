@@ -1,21 +1,41 @@
-<br>
-<h1>Task Builder Form</><br>
-
-<%= form_for(@task) do |f| %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-
-    <%= f.label :priority %>
-    <%= f.range_field(:priority, in: 1..10)%>
-
-    <%= f.submit %>
+<body>
+    <h1>Task Builder Form</h1>
 
 
+    <div class="container">
+        <%= form_for(@task) do |f| %>
+        <div class="row">
+            <div class="col-25">
+                <%= f.label :title %>
+                </div>
+            <div class="col-75">   
+                <%= f.text_field :title %>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-25">
+            <%= f.label :description %>
+            </div>
+            <div class="col-75">
+            <%= f.text_area :description %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+            <%= f.label :priority %>
+            </div>
+            <div class="col-75">
+            <%= f.range_field(:priority, in: 1..10)%>
+            </div>
+        </div>
+        <div class="row">
+            <%= f.submit %>
+        </div>
+      <% end %>
+
+</body>  
 
 
 
-<% end %>
+
+
