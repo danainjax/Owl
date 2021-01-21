@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :tasks
   root "sessions#home"
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
@@ -12,8 +11,7 @@ Rails.application.routes.draw do
   resources :tasks do
     resources :comments, only: [:new, :create, :index, :show]
   end
-  resources :statuses
-  resources :supports
+  
   resources :comments
   resources :assignments 
 
