@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+body {
+  
+    font-family: "Open Sans", sans-serif;
+  }
+
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;

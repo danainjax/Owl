@@ -12,23 +12,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    
-<header>
-  <img src="/images/Xponent_logo.png" style="width:350px;height:350px;">
+<header> 
+
+<img src="/images/Xponent_logo.png" style="width:350px;height:350px;">
+
 </header>
+
   <body>
     
     <div class="topnav">
       <% if !logged_in? %>
-        <%= link_to "Sign Up", signup_path %> | <%= link_to "Log In", login_path %> | <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+        <%= link_to "Sign Up", signup_path %>  <%= link_to "Log In", login_path %>  <%= link_to('Log in with Facebook!', '/auth/facebook') %>
       <% else %>
-        <%= link_to 'Home', root_path %>%>
-        <%= link_to "Add a Task", new_task_path %> |
-        <%= link_to "All Tasks", tasks_path %> | 
-        <%= link_to "Assign a Task", new_assignment_path %> |
-        <%= link_to "Current Assignments Board", assignments_path %> |
+        <%= link_to 'Home', root_path %>
+        <%= link_to "Add a Task", new_task_path %> 
+        <%= link_to "All Tasks", tasks_path %> 
+        <%= link_to "Assign a Task", new_assignment_path %> 
+        <%= link_to "Current Assignments Board", assignments_path %> 
         <%= link_to "Logout", logout_path, method: "delete" %>
       <% end %>
+   
     </div>
 
     <div>

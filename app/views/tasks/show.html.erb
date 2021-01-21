@@ -1,4 +1,11 @@
-<h1> Display Task </h1>
-<p>
-<%= @task.title %> / <%= @task.description %> / Priority: <%= @task.priority %>
-</p>
+<div class="container"> 
+    <div class="row">
+        <h1><%= @task.title %> </h1>
+    </div>
+    <div class="row"> 
+        <%= @task.description %> 
+    </div>
+    <div class="row"> 
+        Priority: <%= @task.priority %>
+    </div>
+</div>

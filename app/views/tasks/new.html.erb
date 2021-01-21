@@ -25,7 +25,7 @@
             <%= f.label :priority %>
             </div>
             <div class="col-75">
-            <%= f.range_field(:priority, in: 1..10)%>
+            <%= f.select :priority, ["Medium", "High", "Low"]%>
             </div>
         </div>
         <div class="row">
