@@ -19,7 +19,7 @@ Specs:
 - [X] Include signup (how e.g. Devise) *app/views/users/new.html.erb*
 - [X] Include login (how e.g. Devise) *app/views/sessions/new.html.erb*
 - [X] Include logout (how e.g. Devise) *app/views/layouts/application.html.erb and app/views/users/show.html.erb*
-- [X] Include third party signup/login (how e.g. Devise/OmniAuth) *Facebook* making sure secret not pushed to github
+- [X] Include third party signup/login (how e.g. Devise/OmniAuth) *Facebook* making sure secret not pushed to github/ *fixed 1/22*
 - [X] Include nested resource show or index (URL e.g. users/2/recipes)
     *users/2/assignments* and *users/2/assignments/1*
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
