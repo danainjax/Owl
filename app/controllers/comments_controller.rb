@@ -5,12 +5,8 @@ class CommentsController < ApplicationController
     end
 
     def create
-        @comment = current_user.comments.build(comment_params)
-        if @commment.save
-            redirect_to @comment
-        else
-            render :new
-        end
+        @comment = Comment.create(comment_params)
+        redirect_to comment_path(@comment)
 
     end
 
@@ -36,8 +32,8 @@ class CommentsController < ApplicationController
 
     private
 
-    def commment_params
-        params.require(:comment).permit(:content)
+    def comment_params
+        params.require(:comment).permit(:content, :task_id, :user_id)
     end
 
 

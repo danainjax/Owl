@@ -1,1 +1,12 @@
 <h1> Form for new Comment </h1>
+<%= form_for (@comment) do |f| %>
+
+    <%= f.collection_select :task_id, Task.all, :id, :title%>
+    <%= f.collection_select :user_id, User.all, :id, :username%>
+
+    <%= f.label "Add comment to task here" %>
+    <%= f.text_field :content %>
+
+    <%= f.submit %>
+
+<% end %>
