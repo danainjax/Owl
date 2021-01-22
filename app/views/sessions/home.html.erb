@@ -15,13 +15,13 @@
 				<span class="todo-count"></span>
 				<ul class="filters">
 					<li>
-						<a href="#/" class="selected">All</a>
+						<%= link_to "Tasks", tasks_path %> 
 					</li>
 					<li>
-						<a href="#/active">Active</a>
+						<%= link_to "Assignments", assignments_path %> 
 					</li>
 					<li>
-						<a href="#/completed">Completed</a>
+						<%= link_to "Comments", comments_path %>
 					</li>
 				</ul>
 				<button class="clear-completed">Clear completed</button>

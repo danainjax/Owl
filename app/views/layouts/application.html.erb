@@ -26,11 +26,8 @@
       <% else %>
         <%= link_to 'Home', root_path %>
         <%= link_to "Add a Task", new_task_path %> 
-        <%= link_to "All Tasks", tasks_path %> 
         <%= link_to "Assign a Task", new_assignment_path %> 
         <%= link_to "Comment on a Task", new_comment_path %>
-        <%= link_to "Comments Index", comments_path %>
-        <%= link_to "Current Assignments Board", assignments_path %> 
         <%= link_to "Logout", logout_path, method: "delete" %>
       <% end %>
    
