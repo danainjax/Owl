@@ -1,1 +1,7 @@
-<h1> Show all the Comments  sorted in a particular way?</h1>
+<h1> Comments Index </h1>
+<ul>
+    <% @comments.each  do |comment| %>
+        <li>Task: <%=  comment.task.title %> / 
+            Comment: <%= comment.content %>
+</ul>
+    <% end %>

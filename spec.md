@@ -4,7 +4,7 @@ Specs:
 - [x] Using Ruby on Rails for the project *for sure*
 - [X] Include at least one has_many relationship (x has_many y; e.g. User has_many Recipes) *User has_many Tasks*
 - [X] Include at least one belongs_to relationship (x belongs_to y; e.g. Post belongs_to User) *Assignment belongs_to User*
-- [ ] Include at least two has_many through relationships (x has_many y through z; e.g. Recipe has_many Items through Ingredients) 
+- [X] Include at least two has_many through relationships (x has_many y through z; e.g. Recipe has_many Items through Ingredients) 
     *(User has many Tasks through Assignments )* 
     *(Task has many comments through Users - user submittable attribute)*
     
@@ -21,9 +21,9 @@ Specs:
 - [X] Include logout (how e.g. Devise) *app/views/layouts/application.html.erb and app/views/users/show.html.erb*
 - [X] Include third party signup/login (how e.g. Devise/OmniAuth) *Facebook* making sure secret not pushed to github/ *fixed 1/22*
 - [X] Include nested resource show or index (URL e.g. users/2/recipes)
-    *users/2/assignments* and *users/2/assignments/1*
+    *users/2/assignments* and *users/2/assignments/1* and *tasks/1/comments* and *tasks/1/comments/1*
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
-*users/1/assignments/new*, *users/2/tasks/new*
+*users/1/assignments/new*, *users/2/tasks/new* *tasks/1/comments/new*
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
