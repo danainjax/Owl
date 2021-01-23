@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   
+  
+  
   resources :tasks do
     resources :comments, only: [:new, :create, :index, :show]
   end

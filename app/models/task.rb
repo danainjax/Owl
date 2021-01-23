@@ -4,4 +4,6 @@ class Task < ApplicationRecord
     has_many :comments, :through => :users
 
     scope :alpha, -> { order(:title) } #call this method in the controller
+    scope :most_comments, -> {joins(:comments).group('tasks.id').order('count(tasks.id) desc') }
+
 end
