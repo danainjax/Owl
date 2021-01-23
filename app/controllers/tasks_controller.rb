@@ -16,10 +16,10 @@ class TasksController < ApplicationController
 
     def index
         if params[:user_id] && @user = User.find_by_id(params[:user_id])
-            @tasks = @user.tasks
+            @tasks = @user.tasks.alpha
         else
             # flash[:message] = "That task doesn't exist" if params[:]
-        @tasks = Task.all 
+        @tasks = Task.alpha
         end
     end
 
