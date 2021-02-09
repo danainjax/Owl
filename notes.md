@@ -64,3 +64,6 @@ Support
 
     (model that is a chat for questions and answers, sharing information and providing team spirit) -->
 
+Currently working on flow and CSS to make a MVP of creating a task, assigning a task, adding a comment to a task, deleting a task, marking a task completed (status?).
+Pain point is wireframing and making sure the usable screen is large enough and not too much white space. Also will need to add images/video to bring project to life.
+Also: BIG issue needs solve for- "Do more, together." How does this app aid in collaboration and getting support or resources to fulfill a task/job/assignment?
