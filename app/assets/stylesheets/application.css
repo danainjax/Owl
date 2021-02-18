@@ -12,22 +12,22 @@
  *
  *= require 'todo'
  /* *= require_tree . */
- /* *= require_self
+ *= require_self
  
   
-/* body {
+  body {
   
     font-family: "Open Sans", sans-serif;
   } */
-/* <head> */
+ <head> 
 /* Style the top navigation bar */
-/* .topnav {
+ .topnav {
     overflow: hidden;
     background-color: #333;
   } */
   
   /* Style the topnav links */
-  /* .topnav a {
+  .topnav a {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -37,11 +37,11 @@
   }
   
   /* Change color on hover */
-    /* .topnav a:hover {
+    .topnav a:hover {
       background-color: #ddd;
       color: black;
     }
-    * {
+     {
       box-sizing: border-box;
     }
     
@@ -91,10 +91,10 @@
     } */
     
     /* Clear floats after the columns */
-    /* .row:after {
+    .row:after {
       content: "";
       display: table;
       clear: both;
     }
     </style>
-    </head> */ 
+    </head>  
