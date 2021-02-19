@@ -1,6 +1,6 @@
 -- Project planning resource --
 
-Xponent App
+Owl App
 
 Models:
 
