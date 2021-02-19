@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   get '/auth/facebook/callback' => 'sessions#facebook'
   get '/login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   
-  
+  # resource :sessions, only: [:new, :create, :destroy]
   
   resources :tasks do
     resources :comments, only: [:new, :create, :index, :show]
