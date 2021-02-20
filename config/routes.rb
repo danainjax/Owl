@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   root "sessions#home"
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
@@ -9,7 +10,9 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   
   # resource :sessions, only: [:new, :create, :destroy]
-  
+  resources :tickets do
+    resources :comments, only: [:new, :create, :index, :show]
+  end
   resources :tasks do
     resources :comments, only: [:new, :create, :index, :show]
   end
@@ -18,6 +21,7 @@ Rails.application.routes.draw do
   resources :assignments 
 
   resources :users do 
+    resources :tickets, only: [:new, :create, :index, :update, :show]
     resources :tasks, only: [:new, :create, :index, :update, :show]
     resources :assignments, only: [:new, :create, :index, :show]
   end

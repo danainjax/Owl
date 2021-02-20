@@ -1,0 +1,16 @@
+<h1>Customer Tickets</h1>
+<div class="row">
+  <div class="column">
+<ul>
+    <% @tickets.each do |ticket| %>
+    <li><h3><%= ticket.title %></h3>
+    </li>
+        <%= ticket.description %></li>
+     / Assigned to:
+        <% ticket.users.each do |user| %>
+        <%= user.username %>
+        <% end %> -->
+
+    <% end %>
+</ul>
+</div>
