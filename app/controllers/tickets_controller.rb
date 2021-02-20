@@ -6,7 +6,9 @@ class TicketsController < ApplicationController
     end
 
     def create
-        @ticket = current_user.tickets.build(ticket_params)
+        @ticket = Ticket.create(ticket_params)
+
+        # @ticket = current_user.tickets.build(ticket_params)
         if @ticket.save
             redirect_to @ticket
         else

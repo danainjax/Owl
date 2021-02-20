@@ -15,6 +15,10 @@ private
         @current_assignment ||= Assignment.find_by_id(session[:assignment_id]) if session[:assignment_id]
     end
 
+    def current_ticket
+        @current_ticket ||= TIcket.find_by_id(session[:ticket_id]) if session[:ticket_id] 
+    end
+    
     def logged_in?
         !!session[:user_id]
     end

@@ -16,9 +16,11 @@ ActiveRecord::Schema.define(version: 2021_02_20_160954) do
     t.string "status"
     t.integer "user_id"
     t.integer "task_id"
+    t.integer "ticket_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["task_id"], name: "index_assignments_on_task_id"
+    t.index ["ticket_id"], name: "index_assignments_on_ticket_id"
     t.index ["user_id"], name: "index_assignments_on_user_id"
   end
 
@@ -26,9 +28,11 @@ ActiveRecord::Schema.define(version: 2021_02_20_160954) do
     t.text "content"
     t.integer "user_id"
     t.integer "task_id"
+    t.integer "ticket_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["task_id"], name: "index_comments_on_task_id"
+    t.index ["ticket_id"], name: "index_comments_on_ticket_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
