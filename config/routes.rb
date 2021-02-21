@@ -13,16 +13,13 @@ Rails.application.routes.draw do
   resources :tickets do
     resources :comments, only: [:new, :create, :index, :show]
   end
-  resources :tasks do
-    resources :comments, only: [:new, :create, :index, :show]
-  end
+  
   
   resources :comments
   resources :assignments 
 
   resources :users do 
     resources :tickets, only: [:new, :create, :index, :update, :show]
-    resources :tasks, only: [:new, :create, :index, :update, :show]
     resources :assignments, only: [:new, :create, :index, :show]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -7,6 +7,8 @@ class TicketsController < ApplicationController
 
     def create
         @ticket = Ticket.create(ticket_params)
+        @ticket.save
+        #figure out how to associate the ticket with a user id and save it
 
         # @ticket = current_user.tickets.build(ticket_params)
         if @ticket.save
@@ -45,7 +47,7 @@ class TicketsController < ApplicationController
     private
 
     def ticket_params
-        params.require(:ticket).permit(:number, :title, :description, :priority, :status)
+        params.require(:ticket).permit(:number, :title, :description, :priority, :status, :user_id)
     end
 
 end

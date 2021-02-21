@@ -25,6 +25,6 @@ class AssignmentsController < ApplicationController
     private
 
     def assignment_params
-        params.require(:assignment).permit(:status, :task_id, :user_id, :ticket_id)
+        params.require(:assignment).permit(:status, :user_id, :ticket_id)
     end
 end

@@ -1,7 +1,7 @@
 <h1> Assignments Log </h1>
 <% @assignments.each do |a| %>
 <ul>
-        <li><%= a.task.title %> / <%= a.task.description %>
+        <li><%= a.ticket.title %> / <%= a.ticket.description %>
         / Assigned to: <%= a.user.username %>/ On: <%= a.created_at%></li>
 </ul>
 <% end %>

@@ -13,7 +13,7 @@ Check box > label status show :status (make selections from 4 options: open, clo
 
     <%= form_for (@assignment) do |f| %>
 
-    <%= f.collection_select :task_id, Task.all, :id, :title%>
+    <%= f.collection_select :ticket_id, Ticket.all, :id, :title%>
 
     <%= f.collection_select :user_id, User.all, :id, :username%>
 

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     #gives access to methods in the views
-    helper_method :current_user, :logged_in?, :current_task, :redirect_if_not_logged_in
+    helper_method :current_user, :logged_in?, :current_task, :redirect_if_not_logged_in, :currrent_ticket
 
 private
     def current_user
@@ -18,7 +18,7 @@ private
     def current_ticket
         @current_ticket ||= TIcket.find_by_id(session[:ticket_id]) if session[:ticket_id] 
     end
-    
+
     def logged_in?
         !!session[:user_id]
     end
