@@ -6,11 +6,11 @@ class TicketsController < ApplicationController
     end
 
     def create
-        @ticket = Ticket.create(ticket_params)
-        @ticket.save
+        # @ticket = Ticket.create(ticket_params)
+        # @ticket.save
         #figure out how to associate the ticket with a user id and save it
 
-        # @ticket = current_user.tickets.build(ticket_params)
+        @ticket = current_user.tickets.build(ticket_params)
         if @ticket.save
             redirect_to @ticket
         else
