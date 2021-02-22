@@ -1,12 +1,13 @@
 
-<h1>Welcome, <%= @user.username %></h1>
+<h1>Welcome, <%= @user.username.upcase %></h1>
 
 <h2> My Assigned Customer Tickets: </h2>
 
-<ol>
-    Add User's Assigned Customer Tickets here
 
-</ol>
+    
+    <h6>Show Customer Tickets Assigned to Current User Here</h6>
+   
+
 
 <%=  form_tag( '/logout', method:'delete') do %>
     <%= submit_tag "Logout" %>
