@@ -16,32 +16,24 @@
 
     <div class="container">
         <%= form_for(@ticket) do |f| %>
-        <div class="row">
-            <div class="col-25">
-                <%= f.label :title %>
-                </div>
-            <div class="col-75">   
-                <%= f.text_field :title %>
-                </div>
-            </div>
-        <div class="row">
-            <div class="col-25">
+        <div class="field form-group">
+                <%= f.label :title %> 
+                <%= f.text_field :title, class:"form-control" %>
+                
+        </div>
+        <div class="field form-group">
             <%= f.label :description %>
-            </div>
-            <div class="col-75">
-            <%= f.text_area :description %>
-            </div>
+            
+            <%= f.text_area :description, class:"form-control" %> 
+            
         </div>
-        <div class="row">
-            <div class="col-25">
+        <div class="field form-group">
             <%= f.label :priority %>
-            </div>
-            <div class="col-75">
-            <%= f.select :priority, ["Medium", "High", "Low"]%>
-            </div>
+            <%= f.select :priority, ["Medium", "High", "Low"], class:"form-control"%>
         </div>
-        <div class="row">
-            <%= f.submit %>
+        <br>
+        <div class="actions">
+          <%= f.submit class:'btn btn-secondary' %>
         </div>
       <% end %>
 
